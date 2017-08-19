@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'haml-rails', '~> 1.0'
 gem 'awesome_print'
-gem 'bunny', '~> 2.7', require: false
+gem 'http'
 
 group :development, :test do
   gem 'byebug', platform: :mri
