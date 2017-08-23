@@ -1,0 +1,10 @@
+= button_to 'Back', twitter_entities_path, method: :get
+
+- @twitter_entity.each do |_, info|
+  %h2= "@#{info[:name]} Tweets"
+  - info[:recent_tweets].each do |favorited_count, tweet|
+    %ul
+      %li
+        = tweet
+        %br
+        = "Likes: #{favorited_count}"

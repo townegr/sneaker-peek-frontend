@@ -1,0 +1,13 @@
+%h1 SneakerPeek Twitter Accounts
+
+%table{style: "border-spacing: 10px;"}
+  %thead
+    %th Account
+    %th Likes
+    %th Followers
+  - @twitter_entities.values.first.each do |entity|
+    %tbody
+      %tr
+        %td= link_to "@#{entity[:name]}", twitter_entity_path(entity[:target])
+        %td= entity[:tweet_count]
+        %td= entity[:follower_count]
